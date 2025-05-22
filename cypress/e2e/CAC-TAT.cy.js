@@ -102,6 +102,19 @@ it('Exibir mensagem de erro ao submeter o formulário com um email com formataç
     cy.get('#phone').type('abcde').should('have.value','')
 
 
+  })
+
+    it('Preenche e limpa o campo nome',  () => {
+
+ cy.get('#firstName')
+ .type('Carlos').should('have.value', 'Carlos')
+ .clear()
+ .should('have.value', '')
+
+
+
+    })
+
 
 
 
@@ -109,4 +122,4 @@ it('Exibir mensagem de erro ao submeter o formulário com um email com formataç
 
 
 
-  })
+  
